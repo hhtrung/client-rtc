@@ -8,7 +8,6 @@ socket.on("DANH_SACH_ONLINE", (arrUserInfo) => {
   });
 });
 
-
 function openStream() {
   const config = { audio: false, video: true };
   return navigator.mediaDevices.getUserMedia(config);
@@ -23,7 +22,12 @@ function playStream(idVideoTag, stream) {
 
 // openStream().then((stream) => playStream("localStream", stream));
 
-var peer = new Peer();
+var peer = new Peer({
+  key: "peerjs",
+  host: "my-peer-1206.herokuapp.com",
+  secure: true,
+  port: 433,
+});
 peer.on("open", (id) => {
   $("#my-peer").append(id);
   $("#btnSignUp").click(() => {
