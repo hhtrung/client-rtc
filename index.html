@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+    <script src="socket.io.js"></script>
+  </head>
+  <body>
+    <p>user online: </p>
+    <ul id="ulUser">
+
+    </ul>
+    <h3 id="my-peer">Your ID: </h3>
+    <video id="localStream" width="300" controls></video>
+    <br />
+    <video id="remoteStream" width="300" controls></video>
+    <br />
+    <input type="text" id="txtUsername" placeholder="Enter your username"/>
+    <button id="btnSignUp">Sign Up</button>
+    <br/>
+    <input type="text" id="remoteId" placeholder="remote id"/>
+    <button id="btnCall">Call</button>
+  </body>
+  <script src="main.js"></script>
+</html>
